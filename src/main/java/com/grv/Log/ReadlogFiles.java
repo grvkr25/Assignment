@@ -19,8 +19,9 @@ public class ReadlogFiles {
 		
 		String filename = "src/jsonfile/readfile.json";
         List<LogFile> logfiles = parseJSONFile(filename);
-        int diff=0;
+        int diff;
        for(int i=0;i<logfiles.size();i++) {
+    	   diff=0;
     	   for(int j=1;j<logfiles.size();j++) {
     		   if(logfiles.get(i).getId().equals(logfiles.get(j).getId())){
     			   if(!(logfiles.get(i).getState().equals(logfiles.get(j).getState()))) {
